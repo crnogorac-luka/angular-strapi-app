@@ -1,0 +1,17 @@
+    <ng-template [ngIf]="isLogin">
+      <app-login-form></app-login-form>
+    <p class="form-footer-text">
+      Nemate korisnički račun?
+      <a (click)="switchForm()">Registrirajte se.</a>
+    </p>
+    </ng-template>
+
+
+    <ng-template [ngIf]="!isLogin">
+    <app-register-form></app-register-form>
+    <p class="form-footer-text">
+      Izradili ste korisnički račun?
+      <a (click)="switchForm()">Prijavite se.</a>
+    </p>
+    </ng-template>
+
