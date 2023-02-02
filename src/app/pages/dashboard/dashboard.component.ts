@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SingleMedia } from 'src/app/models/SingleMedia';
 import { SinglePost } from 'src/app/models/SinglePost';
 import { User } from 'src/app/models/User';
@@ -38,14 +39,19 @@ export class DashboardComponent {
           author,
           post.content,
           coverPhoto,
-          null
+          null,
+          post.isPublished
         );
       });
       this.allPosts = singlePostArray;
     });
   }
 
-  constructor(private httpService: HttpService) {}
+  createNewPost() {
+    this.router.navigate(['/new']);
+  }
+
+  constructor(private httpService: HttpService, private router: Router) {}
 
   ngOnInit() {
     this.getAllPosts();

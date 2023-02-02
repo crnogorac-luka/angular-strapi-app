@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from 'src/app/services/http/http.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-login-form',
@@ -22,6 +23,7 @@ export class LoginFormComponent {
       const password = this.loginForm.get('password')!.value;
       this.httpService.postAuth(email!, password!).subscribe((data) => {
         sessionStorage.setItem('jwt', data.jwt);
+        this.httpService.currentUser = new User(data.user.username, data.user.email, data.user.role.id);
         this.router.navigate(['/home']);
       });
     }

@@ -10,11 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { JWT_OPTIONS } from '@auth0/angular-jwt';
 import { CKEditorModule } from 'ckeditor4-angular'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AuthModule } from './pages/auth/auth.module';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { NewPostComponent } from './pages/new-post/new-post.component';
 
 @NgModule({
@@ -29,7 +31,9 @@ import { NewPostComponent } from './pages/new-post/new-post.component';
     HttpClientModule,
     MatIconModule,
     CKEditorModule,
-    MatOptionModule
+    MatOptionModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [
     JwtHelperService,

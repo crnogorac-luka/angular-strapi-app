@@ -1,5 +1,5 @@
 <div class="root">
-  <button mat-raised-button>Unesi novi sadržaj</button>
+  <button (click)="createNewPost()" mat-raised-button>Unesi novi sadržaj</button>
   <div class="post-list">
     <app-single-post
       [singlePostObject]="item"

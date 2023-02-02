@@ -8,6 +8,7 @@ export class SinglePost {
   content: string;
   coverPhoto: SingleMedia | null;
   document: SingleMedia | null;
+  isPublished: boolean;
 
   constructor(
     title: string,
@@ -15,7 +16,8 @@ export class SinglePost {
     author: User | null,
     content: string,
     coverPhoto: SingleMedia | null,
-    document: SingleMedia | null
+    document: SingleMedia | null,
+    isPublished: boolean
   ) {
     this.title = title;
     this.category = category;
@@ -24,5 +26,6 @@ export class SinglePost {
     this.content = content;
     this.coverPhoto = coverPhoto;
     this.document = document;
+    this.isPublished = isPublished;
   }
 }
