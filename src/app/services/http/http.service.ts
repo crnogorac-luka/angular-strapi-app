@@ -18,6 +18,8 @@ export class HttpService {
     })
   }
 
+  postPost()
+
   getPosts(): Observable<any> {
     const headers = this.getHeaders();
     return this.http
