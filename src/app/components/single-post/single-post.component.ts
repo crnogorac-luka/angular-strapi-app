@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SinglePost } from 'src/app/models/SinglePost';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-single-post',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./single-post.component.scss']
 })
 export class SinglePostComponent {
+@Input() singlePostObject: SinglePost | any;
+author: User | any;
+
+ngOnInit() {
+  this.author = this.singlePostObject.author;
+}
 
 }
