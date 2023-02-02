@@ -4,7 +4,7 @@
     <mat-card-subtitle>{{singlePostObject.author?.username}}</mat-card-subtitle>
     <mat-card-subtitle>Category: {{singlePostObject.category}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="'http://localhost:1337' + singlePostObject.coverPhoto?.url" alt="Photo of a Shiba Inu">
+  <img mat-card-image [src]="singlePostObject ? 'http://localhost:1337' + singlePostObject.coverPhoto?.url : 'assets/media/no-img-placeholder.png'" alt="Cover image">
   <mat-card-content>
     <p>
       {{singlePostObject.content}}

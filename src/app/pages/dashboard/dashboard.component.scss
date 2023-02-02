@@ -1,0 +1,24 @@
+@import 'mixins';
+
+
+.root {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+
+  app-single-post {
+    margin-bottom: 2rem;
+  }
+}
+
+.root {
+  @include responsive(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  app-single-post {
+    @include responsive(tablet) {
+      width: 20rem;
+    }
+  }
+  }

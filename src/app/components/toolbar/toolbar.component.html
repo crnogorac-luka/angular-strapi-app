@@ -1,3 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="toolbar">
   <span>logo</span>
+  <button *ngIf="hasToken()" (click)="signout()" mat-button>Odjava <mat-icon aria-hidden="false" aria-label="Ikona za odjavu" fontIcon="exit_to_app"></mat-icon></button>
 </mat-toolbar>

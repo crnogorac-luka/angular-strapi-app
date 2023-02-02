@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" class="form">
+<form [formGroup]="loginForm" class="form" (ngSubmit)="login()">
 
   <mat-form-field>
     <input matInput placeholder="Email" formControlName="email" required>
@@ -14,5 +14,5 @@
     </mat-error>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" type="submit">Register</button>
+  <button mat-raised-button color="primary" type="submit">Prijava</button>
 </form>

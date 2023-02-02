@@ -1,2 +1,7 @@
-<p>dashboard works!</p>
-<app-single-post [singlePostObject]="item" *ngFor="let item of allPosts"></app-single-post>
+<div class="root">
+  <button>Unesi novi sadržaj</button>
+  <app-single-post
+    [singlePostObject]="item"
+    *ngFor="let item of allPosts"
+  ></app-single-post>
+</div>
