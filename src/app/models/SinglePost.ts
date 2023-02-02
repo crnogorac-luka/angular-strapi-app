@@ -2,7 +2,6 @@ import { SingleMedia } from './SingleMedia';
 import { User } from './User';
 
 export class SinglePost {
-  id: number;
   title: string;
   category: string;
   author: User | null;
@@ -11,7 +10,6 @@ export class SinglePost {
   document: SingleMedia | null;
 
   constructor(
-    id: number,
     title: string,
     category: string,
     author: User | null,
@@ -19,7 +17,6 @@ export class SinglePost {
     coverPhoto: SingleMedia | null,
     document: SingleMedia | null
   ) {
-    this.id = id;
     this.title = title;
     this.category = category;
     this.author = author;

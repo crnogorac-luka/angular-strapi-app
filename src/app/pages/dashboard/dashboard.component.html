@@ -1,7 +1,9 @@
 <div class="root">
-  <button>Unesi novi sadržaj</button>
-  <app-single-post
-    [singlePostObject]="item"
-    *ngFor="let item of allPosts"
-  ></app-single-post>
+  <button mat-raised-button>Unesi novi sadržaj</button>
+  <div class="post-list">
+    <app-single-post
+      [singlePostObject]="item"
+      *ngFor="let item of allPosts"
+    ></app-single-post>
+  </div>
 </div>

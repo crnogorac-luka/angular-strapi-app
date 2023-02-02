@@ -18,7 +18,6 @@ export class DashboardComponent {
         let author = null;
         if (post.author) {
           author = new User(
-            post.author.id,
             post.author.username,
             post.author.email,
             post.author.role
@@ -27,7 +26,6 @@ export class DashboardComponent {
           let coverPhoto = null;
           if (post.coverPhoto) {
             coverPhoto = new SingleMedia(
-              post.coverPhoto.id,
               post.coverPhoto.ext,
               post.coverPhoto.name,
               post.coverPhoto.url
@@ -35,7 +33,6 @@ export class DashboardComponent {
           }
 
         return new SinglePost(
-          post.id,
           post.title,
           post.category,
           author,
